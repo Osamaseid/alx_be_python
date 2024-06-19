@@ -1,8 +1,8 @@
 #simple interest calculator
-P = 1000 #reperesenting $1000
-R = 0.05 #representing 5% annual interest rate
-T = 3  #representing 3 years
+principal = 1000 #reperesenting $1000
+rate = 0.05 #representing 5% annual interest rate
+time = 3  #representing 3 years
 
-I = P * R * T
+I = principal * rate * time
 
 print(f"The simple interest is : {I}")
