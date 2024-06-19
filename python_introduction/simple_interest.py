@@ -5,4 +5,4 @@ T = 3  #representing 3 years
 
 I = P * R * T
 
-print(I)
+print(f"The simple interest is : {I}")
