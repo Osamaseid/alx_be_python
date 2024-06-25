@@ -5,6 +5,7 @@ secret_number = random.randint(1, 10)
 
 # Get user's guess
 guess = int(input("Guess the number (1-10): "))
+guss = +1
 
 # Match the guess
 match guess:
