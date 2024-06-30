@@ -2,7 +2,7 @@ import random
 
 # Generate a secret number
 secret_number = random.randint(1, 10)
-#initializinng guess counte
+#initializinng guess counter 
 guess_counter = 0
 
 while True:
