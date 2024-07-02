@@ -4,18 +4,18 @@ operation = str(input("Choose the operation (+, -, *, /):"))
 
 if operation == "+":
     result = float(num1) + float(num2)
-    print(f"The result is: {result}")
+    print(f"The result is {result}.")
 elif operation == "-":
     result = float(num1) - float(num2)
-    print(f"The result is: {result}")
+    print(f"The result is {result}.")
 elif operation == "/":
     if float(num2) == 0:
         print("Cannot divide by zero.")
     else:
         result = float(num1) / float(num2)
-        print(f"The result is: {result}")
+        print(f"The result is {result}.")
 elif operation == "*":
     result = float(num1) * float(num2)
-    print(f"The result is: {result}")
+    print(f"The result is {result}.")
 else:
     print("Invalid operation.")
