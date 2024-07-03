@@ -1,4 +1,3 @@
-# Prompt the user for the task description, priority, and time sensitivity
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ")
 time_bound = input("Is it time-bound? (yes/no): ")
