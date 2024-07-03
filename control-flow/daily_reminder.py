@@ -1,20 +1,21 @@
-task = input("Please enter a task description: ")
+# Prompt the user for the task description, priority, and time sensitivity
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ")
+time_bound = input("Is it time-bound? (yes/no): ")
 
-priority = input("What is the priority of this task (high, medium, low)? ")
-
-time_bound = input("Is this task time-bound (yes or no)? ")
-
-match priority.lower():
+match priority:
     case "high":
-        reminder = f"This high priority task '{task}' requires immediate attention today!"
+        if time_bound.lower() == "yes":
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+        else:
+            print(f"Reminder: '{task}' is a high priority task.")
     case "medium":
-        reminder = f"This medium priority task '{task}' should be addressed soon."
+        if time_bound.lower() == "yes":
+            print(f"Reminder: '{task}' is a medium priority task that requires attention soon.")
+        else:
+            print(f"Reminder: '{task}' is a medium priority task.")
     case "low":
-        reminder = f"This low priority task '{task}' can be completed at your convenience."
-    case _:
-        reminder = "Invalid priority level entered."
-
-if time_bound.lower() == "yes":
-    reminder = f"{reminder} This task is time-bound and needs to be completed today."
-
-print(reminder)
+        if time_bound.lower() == "yes":
+            print(f"Reminder: '{task}' is a low priority task that should be completed when you have free time.")
+        else:
+            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
