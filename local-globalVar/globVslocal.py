@@ -9,9 +9,6 @@ def enclosing_function():
     print(f"Global variable: {global_variable}")
     print(f"Enclosing variable: {global_variable}")
 
-    # Try to access a local variable (it doesn't exist yet)
-    # print(f"Local variable: {local_variable}")
-
     def local_function():
         # Define a variable with the same name in the local scope
         local_variable = "I am in the local scope."
