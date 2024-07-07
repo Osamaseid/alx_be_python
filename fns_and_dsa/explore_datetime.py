@@ -1,28 +1,37 @@
-from datetime import datetime, timedelta
+# Define global conversion factors
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+CELSIUS_TO_FAHRENHEIT_OFFSET = 32
+FAHRENHEIT_TO_CELSIUS_OFFSET = 32
 
-def display_current_datetime():
+def convert_to_celsius(fahrenheit):
+ 
+    global FAHRENHEIT_TO_CELSIUS_FACTOR, FAHRENHEIT_TO_CELSIUS_OFFSET
+    return (fahrenheit - FAHRENHEIT_TO_CELSIUS_OFFSET) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-    current_date = datetime.now()
-    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
-    print(f"Current date and time: {formatted_date}")
-    return current_date
-
-def calculate_future_date(current_date, days_to_add):
-    future_date = current_date + timedelta(days=days_to_add)
-    formatted_future_date = future_date.strftime("%Y-%m-%d")
-    print(f"Future date: {formatted_future_date}")
-    return future_date
+def convert_to_fahrenheit(celsius):
+ 
+    global CELSIUS_TO_FAHRENHEIT_FACTOR, CELSIUS_TO_FAHRENHEIT_OFFSET
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + CELSIUS_TO_FAHRENHEIT_OFFSET
 
 def main():
-    current_date = display_current_datetime()
-
     try:
-        days_to_add = int(input("Enter the number of days to add to the current date: "))
-    except ValueError:
-        print("Invalid input. Please enter an integer value.")
-        return
+        temperature = float(input("Enter the temperature to convert: "))
+        unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+        
+        if unit == 'F':
+            converted_temperature = convert_to_celsius(temperature)
+            print(f"{temperature}°F is {converted_temperature}°C")
+        elif unit == 'C':
+            converted_temperature = convert_to_fahrenheit(temperature)
+            print(f"{temperature}°C is {converted_temperature}°F")
+        else:
+            raise ValueError("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
     
-    calculate_future_date(current_date, days_to_add)
+    except ValueError as ve:
+        print(f"Error: {ve}")
+    except Exception as e:
+        print("Invalid temperature. Please enter a numeric value.")
 
 if __name__ == "__main__":
     main()
