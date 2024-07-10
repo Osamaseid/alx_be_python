@@ -16,4 +16,9 @@ except ValueTooHighError as e:
 except ValueError:
     print("Invalid input. Please enter a number.")
 
-    
+# alternative way    
+ #   x = 10
+#limit = 100
+ 
+#if x > limit:
+ ##  raise NumberTooLargeError(message)
