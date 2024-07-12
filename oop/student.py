@@ -9,3 +9,5 @@ class Student:
 
 student = Student("Muhammad", 21)
 student.display_info()
+studente = Student("eyu", 28)
+studente.display_info()
