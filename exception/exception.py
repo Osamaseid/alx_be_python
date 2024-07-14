@@ -9,6 +9,6 @@ else :
     print(f.read())
     f.close()
 finally :
-    print("nothig is here")
+    print("file is here")
     
         

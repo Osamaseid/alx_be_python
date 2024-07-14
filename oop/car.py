@@ -23,3 +23,9 @@ class mobile :
 mobile1 = mobile(23, "dd", "green", "34px") 
 
 print(mobile1)  
+
+#The self Keyword:
+#The self keyword is used within instance methods to refer to the current instance of the class.
+#It allows the instance method to access and manipulate the instance's attributes and call other instance methods.
+#The self keyword is a convention in Python, and it is the first parameter in the method definition. However, you can use any other name instead of self, as long as you use the same name consistently within the class.
+#The self keyword is not used when calling the instance method; it is automatically passed by the Python #interpreter when the method is called.
