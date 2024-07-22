@@ -1,0 +1,16 @@
+class Calculator:
+    @staticmethod
+    def add(a, b):
+        
+        return a + b
+
+    @staticmethod
+    def multiply(a, b):
+        
+        return a * b
+    
+result1 = Calculator.add(5, 3)
+print(result1)  
+
+result2 = Calculator.multiply(7, 4)
+print(result2) 
