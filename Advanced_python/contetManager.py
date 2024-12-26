@@ -2,7 +2,6 @@ class FileManager:
     """
     A context manager for handling file operations.
     """
-
     def __init__(self, filename, mode):
         """
         Initializes the context manager with a filename and mode.
