@@ -18,7 +18,6 @@ if __name__ == "__main__":
     
     # Create the generator
     counter_gen = simple_counter(limit)
-    
     # Iterate over the generator and print each number
     for number in counter_gen:
         print(number)
