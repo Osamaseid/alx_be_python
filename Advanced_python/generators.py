@@ -22,3 +22,4 @@ if __name__ == "__main__":
     # Iterate over the generator and print each number
     for number in counter_gen:
         print(number)
+    
