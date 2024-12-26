@@ -47,7 +47,7 @@ if __name__ == "__main__":
     with FileManager('example.txt', 'r') as f:
         content = f.read()
         print(content)  # Output: Hello, World!
-
+another eample
 #############################################
 import sqlite3
 
