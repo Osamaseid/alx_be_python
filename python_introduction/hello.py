@@ -7,10 +7,12 @@ print(len(myName))
 print('What is your age?') # ask for their age
 myAge = input()
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
-
-if name == 'Mary':
-  print('Hello Mary')
-if password == 'swordfish':
-    print('Access granted.')
-else:
-   print('Wrong password.')
+#if else condition
+if name == 'Alice':
+ print('Hi, Alice.')
+elif age < 12:
+ print('You are not Alice, kiddo.')
+elif age > 2000:
+ print('Unlike you, Alice is not an undead, immortal vampire.')
+elif age > 100:
+ print('You are not Alice, grannie.')
